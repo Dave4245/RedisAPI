@@ -2,12 +2,14 @@ package b.dave.base;
 
 import b.dave.base.example.RedisExample;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.List;
 import java.util.UUID;
 
-public class BasePlugin extends JavaPlugin {
+public class BasePlugin extends JavaPlugin implements Listener {
 
     private RedisAPI redisAPI;
 
@@ -37,6 +39,8 @@ public class BasePlugin extends JavaPlugin {
             getServer().getScheduler().runTask(this, () -> getServer().broadcastMessage(message));
 
         });
+
+        getServer().getPluginManager().registerEvents(this, this);
 
     }
 
