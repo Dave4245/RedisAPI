@@ -1,0 +1,7 @@
+name: Base
+version: 1.0
+main: b.dave.base.Base
+api-version: 1.17
+author: KingWithoutPing
+
+commands:

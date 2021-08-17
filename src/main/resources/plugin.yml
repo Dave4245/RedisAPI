@@ -1,0 +1,7 @@
+name: RedisAPI
+version: 1.0
+main: b.dave.base.BasePlugin
+api-version: 1.17
+author: Dave
+
+commands:
